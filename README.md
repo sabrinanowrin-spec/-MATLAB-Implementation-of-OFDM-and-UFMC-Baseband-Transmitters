@@ -7,7 +7,7 @@ It uses LTE-like numerology and preamble-based synchronization, and visualizes t
 
 ---
 
-## 📌 Features
+##  Features
 - **OFDM Transmitter (`tx_ofdm.m`)**
   - Subcarrier indexing (FFT-shifted, symmetric allocation, DC excluded)
   - QAM mapping with Gray coding and unit average power normalization
@@ -36,7 +36,7 @@ It uses LTE-like numerology and preamble-based synchronization, and visualizes t
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 ```text
 OFDM-UFMC-Simulation/
 ├── main_demo_tx_only.m
@@ -45,20 +45,18 @@ OFDM-UFMC-Simulation/
 ├── tx_ufmc.m
 └── figures/
 
+##  Results
+
+### Console Output
+Running the demo script (`main_demo_tx_only.m`) prints key frame information:
+
 
 ### Time-Domain Signals
 Comparison of OFDM and UFMC baseband signals (preamble + guard + data):
 
-<p align="center">
-  <img src="figures/time_ofdm.png" width="420"/>
-  <img src="figures/time_ufmc.png" width="420"/>
-</p>
-
 ### Spectrum
 UFMC achieves smoother out-of-band performance compared to OFDM.
 
-<p align="center">
-  <img src="figures/spectrum_ofdm.png" width="420"/>
-  <img src="figures/spectrum_ufmc.png" width="420"/>
-</p>
-
+**Observation:**  
+- UFMC achieves much lower sidelobes outside the used subcarriers.  
+- OFDM has higher spectral leakage, which could interfere with adjacent channels.
